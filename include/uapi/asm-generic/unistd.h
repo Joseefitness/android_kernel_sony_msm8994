@@ -1032,10 +1032,7 @@ __SYSCALL(__NR_faccessat2, sys_ni_syscall)
 #define __NR_process_madvise 440
 __SYSCALL(__NR_process_madvise, sys_ni_syscall)
 #define __NR_epoll_pwait2 441
-/* epoll_pwait2 (Linux 5.11): wrapper over sys_epoll_pwait that accepts a
- * struct timespec __user* timeout instead of int ms. Without it BootAnimation
- * and BLASTBufferQueue spam ENOSYS retries, blocking SurfaceFlinger. */
-__SYSCALL(__NR_epoll_pwait2, sys_epoll_pwait2)
+__SYSCALL(__NR_epoll_pwait2, sys_ni_syscall)
 #define __NR_mount_setattr 442
 __SYSCALL(__NR_mount_setattr, sys_ni_syscall)
 #define __NR_quotactl_fd 443
